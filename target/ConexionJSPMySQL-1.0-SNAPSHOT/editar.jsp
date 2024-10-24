@@ -66,8 +66,9 @@
                     sta.executeUpdate("update usuarios set nomUsu='"+nomu
                         +"',fedadUsu='"+edad+"',SexoUsu='"+sexo+"',PassUsu='"+
                         pas+"' where codUsu='"+codu+"'");
+                request.getRequestDispatcher("Listado.jsp").forward(request, response); 
                 }
-                request.getRequestDispatcher("Litado.jsp").forward(request, response); 
+               
 
                     %>
     </body>
