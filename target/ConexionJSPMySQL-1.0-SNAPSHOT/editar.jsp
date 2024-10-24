@@ -61,11 +61,13 @@
                     String codu = request.getParameter("txtCod");
                     String nomu = request.getParameter("txtNom");
                     int edad = Integer.parseInt(request.getParameter("txtEdad"));
-                    String sexo = request.getParameter("txtSexo");
+                    String sexo = request.getParameter("txtSex");
                     String pas = request.getParameter("txtPas");
-                    sta.executeUpdate("update usuarios set nomUsu='"+nomu
-                        +"',fedadUsu='"+edad+"',SexoUsu='"+sexo+"',PassUsu='"+
-                        pas+"' where codUsu='"+codu+"'");
+                    sta.executeUpdate("UPDATE usuarios SET nomUsu='" + nomu
+                        + "', edadUsu=" + edad
+                        + ", SexoUsu='" + sexo + "', PassUsu='" + pas
+                        + "' WHERE codUsu='" + codu + "'");
+
                 request.getRequestDispatcher("Listado.jsp").forward(request, response); 
                 }
                
